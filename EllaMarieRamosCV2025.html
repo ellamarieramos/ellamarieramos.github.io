@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ella Marie Ramos — CV</title>
+  <style>
+    :root{
+      --accent:#0b74de;
+      --muted:#6b7280;
+      --bg:#f7f9fb;
+      --card:#ffffff;
+      --maxw:1000px;
+      --gap:20px;
+      --radius:10px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:#0f172a;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+      display:flex;
+      justify-content:center;
+      padding:40px 20px;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      gap:var(--gap);
+      align-items:start;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 6px 18px rgba(15,23,42,0.06);
+      padding:22px;
+    }
+
+    /* Left column */
+    .left .avatar{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      margin-bottom:8px;
+    }
+    .avatar .photo{
+      width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#6aa8f7);
+      display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:24px;
+    }
+    h1{margin:0;font-size:20px}
+    .role{color:var(--muted);font-size:13px;margin-top:4px}
+
+    .contact, .section {margin-top:18px}
+    .contact a{color:var(--accent);text-decoration:none}
+    .muted{color:var(--muted);font-size:13px}
+
+    .skills .skill{
+      margin-top:10px;
+    }
+    .skill .label{display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
+    .bar{
+      height:8px;border-radius:999px;background:#e6eefc;margin-top:6px;overflow:hidden;
+    }
+    .bar > i{
+      display:block;height:100%;background:linear-gradient(90deg,var(--accent),#3aa0ff);
+    }
+
+    /* Right column */
+    .headline{
+      display:flex;justify-content:space-between;align-items:flex-start;gap:12px;
+    }
+    .summary{margin-top:12px;color:var(--muted);line-height:1.45}
+    .section h3{margin:0 0 10px 0;font-size:15px}
+    .job{
+      margin-bottom:14px;padding-bottom:10px;border-bottom:1px dashed #eef2f7;
+    }
+    .job .meta{display:flex;justify-content:space-between;gap:8px;font-size:13px;color:var(--muted)}
+    .job p{margin:8px 0 0 0;line-height:1.5;font-size:14px;color:#111827}
+    ul{margin:8px 0 0 0;padding-left:18px}
+    li{margin:6px 0}
+
+    .tools {display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:#f1f5f9;padding:6px 10px;border-radius:999px;font-size:13px;color:#0f172a}
+
+    /* printable */
+    @media print{
+      body{padding:0;background:white}
+      .container{box-shadow:none;grid-template-columns:1fr 1fr}
+      .card{box-shadow:none;border-radius:0}
+    }
+
+    /* responsive */
+    @media (max-width:880px){
+      .container{grid-template-columns:1fr;max-width:720px}
+      .left{order:2}
+      .right{order:1}
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main" aria-labelledby="name">
+    <!-- LEFT -->
+    <aside class="card left" aria-label="Contact and skills">
+      <div class="avatar">
+        <div class="photo" aria-hidden="true">EM</div>
+        <div>
+          <h1 id="name">Ella Marie Ramos</h1>
+          <div class="role">Test Analyst | Quality Assurance | Test Engineer</div>
+          <div class="muted" style="margin-top:8px;font-size:13px">Total experience: 16 years</div>
+        </div>
+      </div>
+
+      <div class="contact section">
+        <div class="muted">Contact</div>
+        <div style="margin-top:8px">
+          <div class="muted">Singapore, Singapore</div>
+          <div style="margin-top:6px">
+            <div>PH: +63 939 372 7049</div>
+            <div>SG: +65 8184 4978</div>
+            <div style="margin-top:6px"><a href="mailto:ellamarieramos@yahoo.com">ellamarieramos@yahoo.com</a></div>
+            <div style="margin-top:6px"><a href="https://www.linkedin.com/in/ellamarieramos/" target="_blank" rel="noopener">linkedin.com/in/ellamarieramos/</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section expertise">
+        <div class="muted">Expertise</div>
+        <div class="tools" style="margin-top:8px">
+          <span class="chip">Functional Testing</span>
+          <span class="chip">SIT / UAT</span>
+          <span class="chip">Regression</span>
+          <span class="chip">API / Postman</span>
+          <span class="chip">ETL / Data</span>
+          <span class="chip">Payment Systems</span>
+          <span class="chip">Automation (Cypress)</span>
+          <span class="chip">Selenium (GUI)</span>
+        </div>
+      </div>
+
+      <div class="section skills">
+        <div class="muted">Selected Skills (visual)</div>
+
+        <div class="skill">
+          <div class="label"><span>Testing & QA</span><span>90%</span></div>
+          <div class="bar"><i style="width:90%"></i></div>
+        </div>
+
+        <div class="skill">
+          <div class="label"><span>Automation / API</span><span>90%</span></div>
+          <div class="bar"><i style="width:90%"></i></div>
+        </div>
+
+        <div class="skill">
+          <div class="label"><span>Financial Systems</span><span>90%</span></div>
+          <div class="bar"><i style="width:90%"></i></div>
+        </div>
+
+        <div class="skill">
+          <div class="label"><span>Team Collaboration</span><span>60%</span></div>
+          <div class="bar"><i style="width:60%"></i></div>
+        </div>
+      </div>
+
+      <div class="section muted" style="margin-top:18px">
+        Tools & Technologies
+        <div style="margin-top:10px" class="tools">
+          <span class="chip">JIRA</span>
+          <span class="chip">GitHub</span>
+          <span class="chip">HP ALM</span>
+          <span class="chip">Azure DevOps</span>
+          <span class="chip">Postman</span>
+          <span class="chip">JMeter</span>
+          <span class="chip">Tableau</span>
+          <span class="chip">IBM Cognos</span>
+          <span class="chip">SQL / DB</span>
+          <span class="chip">UNIX</span>
+        </div>
+      </div>
+
+      <div class="section muted" style="margin-top:18px">
+        Certifications
+        <ul style="margin-top:8px">
+          <li>IBM Cognos Analytics - Author Reports Fundamentals (v11.0)</li>
+          <li>IBM Cognos Framework Manager: Design Metadata Models (v11.0)</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- RIGHT -->
+    <section class="card right" aria-label="Work and education">
+      <div class="headline">
+        <div>
+          <div style="font-weight:700">Professional Summary</div>
+          <div class="muted" style="margin-top:6px">14 years as Software Test Analyst (backend focus) • 2 years as Application Support Analyst</div>
+        </div>
+        <div style="text-align:right" class="muted">
+          <div>Role: Senior QA / Test Analyst</div>
+          <div style="margin-top:6px">Location: Singapore / Manila</div>
+        </div>
+      </div>
+
+      <p class="summary">
+        Experienced Test Analyst with strong background in backend system testing, financial settlement and payment gateway processes, automation (Cypress) and API testing. Extensive experience performing test planning, test case creation, SQL-based data verification, defect management and production verification testing across Agile and Waterfall environments.
+      </p>
+
+      <div class="section">
+        <h3>Work Experience</h3>
+
+        <div class="job">
+          <div style="font-weight:600">MSI Global Pte. LTD — IT Consultant (Test Analyst)</div>
+          <div class="meta"><span>Mar 2025 - Current</span><span>Singapore, SG</span></div>
+          <p>
+            Responsible for software testing process and defect management. Test execution and verification including verification of financial settlement reports (Tableau), credit card authorization, clearing and settlement with acquirers (VISA, MasterCard, NETS 2.0).
+            Developed SQL scripts for data verification, API testing with Postman, and system integration testing planning.
+          </p>
+        </div>
+
+        <div class="job">
+          <div style="font-weight:600">OpenSolar — Quality Assurance Specialist</div>
+          <div class="meta"><span>Jul 2023 - Feb 2025</span><span>Manila, PH</span></div>
+          <p>
+            Test case creation, test execution (smoke, regression), GitHub ticket planning, defect management, and sprint ceremonies participation. Performed automation and API verification activity.
+          </p>
+        </div>
+
+        <div class="job">
+          <div style="font-weight:600">Prosource Global BPO — Senior QA Engineer</div>
+          <div class="meta"><span>Feb 2023 - Jul 2023</span><span>Manila, PH</span></div>
+          <p>
+            Performed test case creation and execution, defect tracking, and test result reporting across milestones and releases.
+          </p>
+        </div>
+
+        <div class="job">
+          <div style="font-weight:600">Willow Technologies — Senior QA Tester</div>
+          <div class="meta"><span>Jan 2022 - Jan 2023</span><span>Manila, PH</span></div>
+          <p>
+            Created and executed test cases for sprints, prepared test data, developed SQL verification scripts, participated in scrum ceremonies, and supported production deployment planning and verification (PVT). Maintenance of automation scripts and triage of automation failures.
+          </p>
+        </div>
+
+        <div class="job">
+          <div style="font-weight:600">Infor PSSC — Senior QA Analyst</div>
+          <div class="meta"><span>Mar 2021 - Jan 2022</span><span>Manila, PH</span></div>
+          <p>
+            Test case creation and execution, smoke testing, SQL script development, monitoring automation, and triage of failures across releases.
+          </p>
+        </div>
+
+        <div class="job">
+          <div style="font-weight:600">Land Transport Authority — Test Engineer / Test Lead</div>
+          <div class="meta"><span>Oct 2011 - May 2018</span><span>Singapore, SG</span></div>
+          <p>
+            Focus on transaction generation, payment gateway testing, reconciliation verification, financial reports (Deloitte framework), API testing (Postman/JMeter), and automation execution and verification. Test summary preparation and UAT sign-off activities.
+          </p>
+        </div>
+
+        <div class="job">
+          <div style="font-weight:600">Earlier roles (selected)</div>
+          <div class="meta"><span>2007 - 2011</span><span>Manila / Singapore</span></div>
+          <ul>
+            <li>JTC Corporation — Software Testing Engineer (Apr 2011 - Oct 2011)</li>
+            <li>Starhub Ltd. — Software Tester (Jun 2010 - Nov 2010)</li>
+            <li>PLDT — Software Quality Analyst (Apr 2009 - Apr 2010)</li>
+            <li>Globe Telecoms — Software QA Tester (Jul 2008 - Mar 2009)</li>
+            <li>Alsons / AWS — QA Engineer (Sep 2007 - Jul 2008)</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="section">
+        <h3>Process & Methods</h3>
+        <div class="muted">
+          Agile Scrum • Waterfall • Change Management • Test Case & Defect Management • Shift-left (PR level testing) • BDD
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Tools, Platforms & Databases</h3>
+        <ul>
+          <li>Postman, JMeter, Selenium, Cypress</li>
+          <li>IBM Cognos, Tableau, Crystal Reports</li>
+          <li>Informatica, IBM DataStage (ETL)</li>
+          <li>Oracle, DB2, MS SQL Server, PostgreSQL</li>
+          <li>UNIX, IBM WebSphere, AIX, Windows</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Education</h3>
+        <div style="font-weight:600">De La Salle University - Dasmariñas</div>
+        <div class="muted">B.S. Computer Science (2003 - 2007)</div>
+      </div>
+
+      <div class="section" style="margin-top:14px">
+        <div class="muted" style="font-size:13px">Notes</div>
+        <div style="margin-top:8px;font-size:13px;color:var(--muted)">
+          This HTML was generated from the uploaded PDF CV. Edit text directly in this file to tweak wording, dates or add new positions. Save and publish to GitHub Pages, Netlify (free tier), or export as PDF from browser for printing.
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
